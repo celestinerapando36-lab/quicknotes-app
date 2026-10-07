@@ -5,8 +5,9 @@ const notesList = document.querySelector("#notes-list");
 const noteCount = document.querySelector("#note-count");
 const errorMessage = document.querySelector("#error-message");
 const searchInput = document.querySelector("#search-input");
-const STORAGE_KEY = "quicknotes";
+const charCount = document.querySelector("#char-count");
 
+const STORAGE_KEY = "quicknotes";
 const MAX_LENGTH = 200;
 
 let notes = loadNotes();
@@ -82,6 +83,13 @@ function render() {
   });
 }
 
+function updateCharCount() {
+  const length = noteInput.value.length;
+  charCount.textContent = length + " / " + MAX_LENGTH;
+  charCount.classList.toggle("warning", length >= 170 && length <= MAX_LENGTH);
+  charCount.classList.toggle("over", length > MAX_LENGTH);
+}
+
 function addNote(event) {
   event.preventDefault();
   const text = noteInput.value.trim();
@@ -105,6 +113,7 @@ function addNote(event) {
  
   saveNotes();
   noteInput.value = "";
+  updateCharCount();
   render();
 }
 
@@ -118,4 +127,5 @@ function deleteNote(id) {
 
 form.addEventListener("submit", addNote);
 searchInput.addEventListener("input", render);
+noteInput.addEventListener("input", updateCharCount);
 render();

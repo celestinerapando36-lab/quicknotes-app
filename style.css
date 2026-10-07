@@ -88,7 +88,19 @@ button:hover { background: #0b5a54; }
   min-height: 1.5em;
   margin: 0.5rem 0 0;
 }
-
+#char-count {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: #52606d;
+}
+#char-count.warning { 
+    color: #b45309; 
+    font-weight: 600;
+ }
+#char-count.over    { 
+    color: #c62828; 
+    font-weight: 600; 
+}
 #note-count { color: #52606d; }
 
 

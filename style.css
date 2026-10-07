@@ -1,0 +1,163 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #eef2f3;
+}
+
+header {
+  background: #0f766e;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+header h1 { 
+    margin: 0; 
+}
+header p { 
+    margin: 0.25rem 0 0; 
+    opacity: 0.9; 
+}
+
+main {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+section h2 { 
+    margin-top: 0; 
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #52606d;
+}
+
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+form label {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+form input { 
+    flex: 1; 
+}
+input, select, button {
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 8px;
+}
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 1px;
+}
+#search-input {
+    width: 100%; 
+}
+
+button {
+  background: #0f766e;
+  color: #fff;
+  border-color: #0f766e;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover { background: #0b5a54; }
+
+#error-message {
+  color: #c62828;
+  font-weight: 600;
+  min-height: 1.5em;
+  margin: 0.5rem 0 0;
+}
+
+#note-count { color: #52606d; }
+
+
+#notes-list { list-style: none; margin: 0; padding: 0; }
+
+.note-card {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e4e7eb;
+  border-left: 6px solid #999;
+  border-radius: 8px;
+  margin: 0 0 0.75rem;
+  background: #fafbfc;
+}
+.note-text { 
+    margin: 0 0 0.5rem; 
+    overflow-wrap: anywhere; 
+}
+.note-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #52606d;
+}
+.note-meta .delete-btn {
+  margin-left: auto;
+  padding: 0.3rem 0.7rem;
+  background: #fff;
+  color: #c62828;
+  border-color: #c62828;
+}
+.note-meta .delete-btn:hover { 
+    background: #c62828; 
+    color: #fff; 
+}
+
+.category-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.category-personal { border-left-color: #0f9d8f; }
+.category-work     { border-left-color: #8b1a1a; }
+.category-study    { border-left-color: #1d5fd1; }
+.category-personal .category-label { background: #0f9d8f; }
+.category-work .category-label     { background: #8b1a1a; }
+.category-study .category-label    { background: #1d5fd1; }
+
+.empty-message { 
+    color: #52606d; 
+    font-style: italic; 
+}
+
+#clear-all { 
+    margin-top: 0.5rem; 
+    background: #fff; 
+    color: #c62828; 
+    border-color: #c62828; 
+}
+#clear-all:hover { 
+    background: #c62828; 
+    color: #fff; 
+}
+
+@media (max-width: 600px) {
+  form { flex-direction: column; }
+  header h1 { font-size: 1.5rem; }
+  .note-meta { flex-wrap: wrap; }
+}

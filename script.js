@@ -6,6 +6,7 @@ const noteCount = document.querySelector("#note-count");
 const errorMessage = document.querySelector("#error-message");
 const searchInput = document.querySelector("#search-input");
 const charCount = document.querySelector("#char-count");
+const clearAllButton = document.querySelector("#clear-all");
 
 const STORAGE_KEY = "quicknotes";
 const MAX_LENGTH = 200;
@@ -124,8 +125,17 @@ function deleteNote(id) {
   saveNotes();
   render();
 }
+function clearAll() {
+  if (notes.length === 0) return;
+  if (confirm("Delete all notes?")) {
+    notes = [];
+    saveNotes();
+    render();
+  }
+}
 
 form.addEventListener("submit", addNote);
 searchInput.addEventListener("input", render);
 noteInput.addEventListener("input", updateCharCount);
+clearAllButton.addEventListener("click", clearAll);
 render();

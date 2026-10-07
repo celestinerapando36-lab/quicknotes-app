@@ -137,6 +137,17 @@ button:hover { background: #0b5a54; }
     color: #fff; 
 }
 
+#clear-all {
+  margin-top: 0.5rem;
+  background: #fff;
+  color: #c62828;
+  border-color: #c62828;
+}
+#clear-all:hover {
+  background: #c62828;
+  color: #fff;
+}
+
 .category-label {
   font-size: 0.75rem;
   font-weight: 600;

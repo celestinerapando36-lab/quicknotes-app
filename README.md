@@ -8,6 +8,7 @@ QuickNotes is a small note-taking web app built with plain HTML, CSS and JavaScr
 - Validation: empty notes and notes over 200 characters show an error message
 - Live character counter that warns you as you approach the 200 limit
 - Delete any single note
+- Clear all notes at once with a confirmation prompt to prevent accidental deletion
 - Live search that ignores upper and lower case
 - Note counter ("You have no notes yet.", "You have 1 note.", "You have N notes.")
 - Notes saved with localStorage
@@ -26,5 +27,7 @@ No build step or installation is needed.
 - How to build a page with semantic HTML tags and link labels to inputs.
 - How to use Flexbox and a media query to make a layout work on phones.
 - How to build the page from an array of objects with `createElement` and `textContent`, which is safer than `innerHTML`.
+- How to use event listeners for forms, buttons and search input.
+- How to filter arrays to implement search and delete functionality.
 - How to save and load data with `localStorage`, `JSON.stringify` and `JSON.parse`.
 - How to use small, clear Git commits to track progress.
